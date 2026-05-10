@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cassi-Luxe</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+font-family:'Inter',sans-serif;
+color:white;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+overflow:hidden;
+position:relative;
+}
+
+body::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(212,175,55,.12);
+filter:blur(120px);
+border-radius:50%;
+top:-100px;
+left:-100px;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.6);
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0);}
+}
+
+.hero img{
+width:100%;
+display:block;
+}
+
+.content{
+padding:30px 24px;
+text-align:center;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:54px;
+color:#f5df9b;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:14px;
+letter-spacing:2px;
+color:#d8c78f;
+margin-bottom:24px;
+}
+
+.desc{
+font-size:14px;
+line-height:1.8;
+color:rgba(255,255,255,.72);
+margin-bottom:30px;
+}
+
+.button{
+display:flex;
+justify-content:center;
+align-items:center;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:18px;
+border-radius:18px;
+font-weight:600;
+font-size:16px;
+transition:.3s;
+box-shadow:0 10px 30px rgba(37,211,102,.35);
+}
+
+.button:hover{
+transform:translateY(-2px);
+}
+
+.footer{
+margin-top:20px;
+font-size:11px;
+letter-spacing:2px;
+color:rgba(255,255,255,.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="hero">
+<img src="logo.jpg" alt="Cassi Luxe">
+</div>
+
+<div class="content">
+
+<h1>Cassi-Luxe</h1>
+
+<div class="subtitle">
+PRIVATE LUXURY CONCIERGE
+</div>
+
+<div class="desc">
+A curated world of exclusive fashion,
+rare collections, and elevated private sourcing.
+
+Designed for clients who value discretion,
+prestige, and timeless luxury.
+
+Worldwide private service available 24/7.
+</div>
+
+<a class="button" href="https://ads.cdysc.com/w/lDwCRM" target="_blank">
+Enter Private Access
+</a>
+
+<div class="footer">
+EXCLUSIVE • ELEVATED • WORLDWIDE
+</div>
