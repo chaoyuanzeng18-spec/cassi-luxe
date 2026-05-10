@@ -4,70 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cassi-Luxe</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #050505;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
       font-family: 'Inter', sans-serif;
       color: white;
-      min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding: 20px;
     }
-    .card { max-width: 400px; }
-    .hero img { width: 150px; margin-bottom: 20px; }
-    .content h1 { font-family: 'Cormorant Garamond', serif; font-size: 32px; margin-bottom: 10px; }
-    .subtitle { font-size: 14px; font-weight: 600; margin-bottom: 15px; letter-spacing: 1px; }
-    .desc { font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #FF5A1F;
-      color: white;
-      text-decoration: none;
+
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #FFD700; /* 金色 */
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 0.85em;
+      letter-spacing: 1px;
+      margin: 8px 0;
+      color: #fff;
       font-weight: 600;
-      border-radius: 4px;
-      transition: background 0.3s;
     }
-    .button:hover { background: #e14b10; }
-    .footer { margin-top: 20px; font-size: 12px; color: #ccc; letter-spacing: 1px; }
+
+    .desc {
+      font-size: 0.9em;
+      line-height: 1.5em;
+      margin: 10px 0 20px 0;
+      color: #fff;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #00c853; /* 绿色按钮 */
+      color: white;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: background-color 0.2s;
+    }
+
+    .cta-button:hover {
+      background-color: #00e676;
+    }
+
+    .footer {
+      font-size: 0.7em;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    /* 响应式移动端优化 */
+    @media (max-width: 480px) {
+      .logo-container img {
+        width: 150px;
+        height: 150px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      .desc {
+        font-size: 0.8em;
+        line-height: 1.4em;
+      }
+      .cta-button {
+        padding: 10px 24px;
+        font-size: 0.9em;
+      }
+    }
   </style>
-</head>
-<body>
-
-  <div class="card">
-    <div class="hero">
-      <img src="logo.jpg" alt="Cassi-Luxe">
-    </div>
-
-    <div class="content">
-      <h1>Cassi-Luxe</h1>
-      <div class="subtitle">PRIVATE LUXURY CONCIERGE</div>
-      <div class="desc">
-        A curated world of exclusive fashion,<br>
-        rare collections, and elevated private sourcing.<br>
-        Designed for clients who value discretion,<br>
-        prestige, and timeless luxury.<br>
-        Worldwide private service available 24/7.
-      </div>
-
-      <!-- 按钮点击触发 Meta Pixel Lead -->
-      <a id="cta-button" class="button" target="_blank">
-        Enter Private Access
-      </a>
-    </div>
-
-    <div class="footer">EXCLUSIVE • ELEVATED • WORLDWIDE</div>
-  </div>
-
-  <!-- Meta Pixel -->
+  <!-- Meta Pixel 基础代码 -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -77,27 +102,37 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '你的像素ID'); // ← 改成你的 Meta Pixel ID
+    fbq('init', '1527651868565912'); // 你的 Pixel ID
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=你的像素ID&ev=PageView&noscript=1"
-  /></noscript>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="logo.jpg" alt="Cassi-Luxe">
+  </div>
 
-  <!-- 按钮动态填充文本和触发 Lead -->
+  <h1>Cassi-Luxe</h1>
+  <div class="subtitle">PRIVATE LUXURY CONCIERGE</div>
+  <div class="desc">
+    A curated world of exclusive fashion,<br>
+    rare collections, and elevated private sourcing.<br>
+    Designed for clients who value discretion,<br>
+    prestige, and timeless luxury.<br>
+    Worldwide private service available 24/7.
+  </div>
+
+  <a id="cta-button" class="cta-button" href="https://ads.cdysc.com/w/1DwCRM" target="_blank">
+    Enter Private Access
+  </a>
+
+  <div class="footer">EXCLUSIVE • ELEVATED • WORLDWIDE</div>
+
   <script>
-    const BUTTON_TEXT = "Enter Private Access"; // 按钮文案
-    const BUTTON_URL = "https://ads.cdysc.com/w/1DwCRM"; // 跳转链接
-
+    // Meta Pixel Lead 事件
     const cta = document.getElementById('cta-button');
-    cta.textContent = BUTTON_TEXT;
-    cta.href = BUTTON_URL;
-
-    // 点击按钮触发 Meta Pixel Lead 事件
     cta.addEventListener('click', () => {
       fbq('track', 'Lead');
     });
   </script>
-
 </body>
 </html>
