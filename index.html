@@ -9,113 +9,111 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-background:#050505;
-font-family:'Inter',sans-serif;
-color:white;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:20px;
-overflow:hidden;
-position:relative;
+  background:#050505;
+  font-family:'Inter',sans-serif;
+  color:white;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  overflow:hidden;
+  position:relative;
 }
 
 body::before{
-content:'';
-position:absolute;
-width:500px;
-height:500px;
-background:rgba(212,175,55,.12);
-filter:blur(120px);
-border-radius:50%;
-top:-100px;
-left:-100px;
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:rgba(212,175,55,.12);
+  filter:blur(120px);
+  border-radius:50%;
+  top:-100px;
+  left:-100px;
 }
 
 .card{
-width:100%;
-max-width:420px;
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:30px;
-overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.6);
-animation:float 5s ease-in-out infinite;
+  width:100%;
+  max-width:420px;
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+  animation:float 5s ease-in-out infinite;
 }
 
 @keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-5px);}
-100%{transform:translateY(0);}
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+  100%{transform:translateY(0);}
 }
 
 .hero img{
-width:100%;
-display:block;
+  width:100%;
+  display:block;
 }
 
 .content{
-padding:30px 24px;
-text-align:center;
+  padding:30px 24px;
+  text-align:center;
 }
 
 h1{
-font-family:'Cormorant Garamond',serif;
-font-size:54px;
-color:#f5df9b;
-margin-bottom:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:54px;
+  color:#f5df9b;
+  margin-bottom:10px;
 }
 
 .subtitle{
-font-size:14px;
-letter-spacing:2px;
-color:#d8c78f;
-margin-bottom:24px;
+  font-size:14px;
+  letter-spacing:2px;
+  color:#d8c78f;
+  margin-bottom:24px;
 }
 
 .desc{
-font-size:14px;
-line-height:1.8;
-color:rgba(255,255,255,.72);
-margin-bottom:30px;
+  font-size:14px;
+  line-height:1.8;
+  color:rgba(255,255,255,.72);
+  margin-bottom:30px;
 }
 
 .button{
-display:flex;
-justify-content:center;
-align-items:center;
-background:#25D366;
-color:white;
-text-decoration:none;
-padding:18px;
-border-radius:18px;
-font-weight:600;
-font-size:16px;
-transition:.3s;
-box-shadow:0 10px 30px rgba(37,211,102,.35);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  padding:18px;
+  border-radius:18px;
+  font-weight:600;
+  font-size:16px;
+  transition:.3s;
+  box-shadow:0 10px 30px rgba(37,211,102,.35);
 }
 
 .button:hover{
-transform:translateY(-2px);
+  transform:translateY(-2px);
 }
 
 .footer{
-margin-top:20px;
-font-size:11px;
-letter-spacing:2px;
-color:rgba(255,255,255,.4);
+  margin-top:20px;
+  font-size:11px;
+  letter-spacing:2px;
+  color:rgba(255,255,255,.4);
 }
-
 </style>
 </head>
 
@@ -123,32 +121,66 @@ color:rgba(255,255,255,.4);
 
 <div class="card">
 
-<div class="hero">
-<img src="logo.jpg" alt="Cassi Luxe">
+  <div class="hero">
+    <img src="logo.jpg" alt="Cassi Luxe">
+  </div>
+
+  <div class="content">
+    <h1>Cassi-Luxe</h1>
+
+    <div class="subtitle">
+      PRIVATE LUXURY CONCIERGE
+    </div>
+
+    <div class="desc">
+      A curated world of exclusive fashion,<br>
+      rare collections, and elevated private sourcing.<br>
+      Designed for clients who value discretion,<br>
+      prestige, and timeless luxury.<br>
+      Worldwide private service available 24/7.
+    </div>
+
+    <!-- CTA 按钮 -->
+    <a id="cta-button" class="button" target="_blank">Enter Private Access</a>
+
+    <div class="footer">
+      EXCLUSIVE • ELEVATED • WORLDWIDE
+    </div>
+  </div>
 </div>
 
-<div class="content">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1527651868565912'); // 替换为你的 Pixel ID
+fbq('track', 'PageView');
+</script>
 
-<<h1>Cassi-Luxe</h1>
+<script>
+const BUTTON_TEXT = "Enter Private Access";
+const BUTTON_URL = "https://ads.cdysc.com/w/lDwCRM";
 
-<div class="subtitle">
-PRIVATE LUXURY CONCIERGE
-</div>
+const cta = document.getElementById('cta-button');
+cta.textContent = BUTTON_TEXT;
+cta.href = BUTTON_URL;
 
-<div class="desc">
-A curated world of exclusive fashion,
-rare collections, and elevated private sourcing.
+// 点击按钮触发 Lead 事件
+cta.addEventListener('click', () => {
+  fbq('track', 'Lead');
+});
+</script>
 
-Designed for clients who value discretion,
-prestige, and timeless luxury.
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1527651868565912&ev=PageView&noscript=1"/>
+</noscript>
 
-Worldwide private service available 24/7.
-</div>
-
-<a class="button" href="https://ads.cdysc.com/w/lDwCRM" target="_blank">
-Enter Private Access
-</a>
-
-<div class="footer">
-EXCLUSIVE • ELEVATED • WORLDWIDE
-</div>
+</body>
+</html>
