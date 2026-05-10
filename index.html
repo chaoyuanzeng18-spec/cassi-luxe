@@ -40,7 +40,6 @@
       font-size: 0.85em;
       letter-spacing: 1px;
       margin: 8px 0;
-      color: #fff;
       font-weight: 600;
     }
 
@@ -48,7 +47,6 @@
       font-size: 0.9em;
       line-height: 1.5em;
       margin: 10px 0 20px 0;
-      color: #fff;
     }
 
     .cta-button {
@@ -70,10 +68,9 @@
     .footer {
       font-size: 0.7em;
       letter-spacing: 2px;
-      color: #fff;
+      margin-top: 10px;
     }
 
-    /* 响应式移动端优化 */
     @media (max-width: 480px) {
       .logo-container img {
         width: 150px;
@@ -92,6 +89,7 @@
       }
     }
   </style>
+
   <!-- Meta Pixel 基础代码 -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -102,7 +100,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1527651868565912'); // 你的 Pixel ID
+    fbq('init', '1527651868565912'); // 替换为你的 Pixel ID
     fbq('track', 'PageView');
   </script>
 </head>
@@ -128,8 +126,8 @@
   <div class="footer">EXCLUSIVE • ELEVATED • WORLDWIDE</div>
 
   <script>
-    // Meta Pixel Lead 事件
     const cta = document.getElementById('cta-button');
+    // 点击按钮触发 Meta Pixel Lead
     cta.addEventListener('click', () => {
       fbq('track', 'Lead');
     });
