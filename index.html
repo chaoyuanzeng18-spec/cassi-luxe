@@ -164,26 +164,33 @@ fbq('track', 'PageView');
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+
   const BUTTON_TEXT = "Enter Private Access";
   const BUTTON_URL = "https://ads.cdysc.com/w/lDwCRM";
 
   const cta = document.getElementById('cta-button');
 
   if (cta) { // 确保按钮存在
+
     cta.textContent = BUTTON_TEXT;
     cta.href = BUTTON_URL;
 
     // 点击按钮触发 Lead 事件
     cta.addEventListener('click', (e) => {
+
       e.preventDefault();
+
       fbq('track', 'Lead'); // 发送 Lead 事件
 
-      // 等 Pixel 发送完再打开新页面
+      // 等 Pixel 发送完成后再跳转
       setTimeout(() => {
         window.open(BUTTON_URL, '_blank');
       }, 800);
+
     });
+
   }
+
 });
 </script>
 
