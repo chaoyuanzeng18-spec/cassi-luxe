@@ -44,14 +44,15 @@ body::before{
   width:100%;
   max-width:420px;
   background:rgba(255,255,255,.05);
-  backdrop-filter:blur(20px);
   border:1px solid rgba(255,255,255,.08);
   border-radius:30px;
   overflow:hidden;
   box-shadow:0 20px 60px rgba(0,0,0,.6);
-  animation:float 5s ease-in-out infinite;
-}
 
+  /* 临时关闭动画和滤镜，Event Tool 检测按钮用 */
+  animation: none;
+  backdrop-filter: none;
+}
 @keyframes float{
   0%{transform:translateY(0);}
   50%{transform:translateY(-5px);}
