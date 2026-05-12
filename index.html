@@ -140,14 +140,10 @@ h1{
       Worldwide private service available 24/7.
     </div>
 
-    <!-- CTA 按钮 -->
-    <a id="cta-button" class="button" target="_blank">Enter Private Access</a>
-
-    <div class="footer">
-      EXCLUSIVE • ELEVATED • WORLDWIDE
-    </div>
-  </div>
-</div>
+  <!-- CTA 按钮 -->
+<a id="cta-button" class="button" href="https://ads.cdysc.com/w/lDwCRM" target="_blank">
+  Enter Private Access
+</a>
 
 <!-- Meta Pixel -->
 <script>
@@ -163,17 +159,19 @@ fbq('init', '1276715154611254'); // 替换为你的 Pixel ID
 fbq('track', 'PageView');
 </script>
 
+<!-- 点击按钮触发 Lead 事件 -->
 <script>
-const BUTTON_TEXT = "Enter Private Access";
-const BUTTON_URL = "https://ads.cdysc.com/w/lDwCRM";
-
-const cta = document.getElementById('cta-button');
-cta.textContent = BUTTON_TEXT;
-cta.href = BUTTON_URL;
-
-// 点击按钮触发 Lead 事件
-cta.addEventListener('click', () => {
-  fbq('track', 'Lead');
+document.addEventListener('DOMContentLoaded', () => {
+  const cta = document.getElementById('cta-button');
+  if(cta){
+    cta.addEventListener('click', (e) => {
+      e.preventDefault();          // 阻止默认立即跳转
+      fbq('track','Lead');         // 发送 Lead 事件
+      setTimeout(() => {
+        window.open(cta.href,'_blank'); // 延迟跳转，保证 Pixel 事件发送
+      }, 800);
+    });
+  }
 });
 </script>
 
@@ -181,6 +179,3 @@ cta.addEventListener('click', () => {
   <img height="1" width="1" style="display:none"
        src="https://www.facebook.com/tr?id=1276715154611254&ev=PageView&noscript=1"/>
 </noscript>
-
-</body>
-</html>
