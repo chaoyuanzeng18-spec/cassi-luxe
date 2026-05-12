@@ -172,8 +172,16 @@ cta.textContent = BUTTON_TEXT;
 cta.href = BUTTON_URL;
 
 // 点击按钮触发 Lead 事件
-cta.addEventListener('click', () => {
+cta.addEventListener('click', (e) => {
+
+  e.preventDefault();
+
   fbq('track', 'Lead');
+
+  setTimeout(() => {
+    window.open(BUTTON_URL, '_blank');
+  }, 800);
+
 });
 </script>
 
