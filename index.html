@@ -158,12 +158,11 @@ fbq('track', 'PageView');
 document.addEventListener('DOMContentLoaded', () => {
   const cta = document.getElementById('cta-button');
   if(cta){
-    cta.addEventListener('click', (e) => {
-      e.preventDefault();          // 阻止默认立即跳转
-      fbq('track','Lead');         // 发送 Lead 事件
-      setTimeout(() => {
-        window.open(cta.href,'_blank'); // 延迟跳转，保证 Pixel 事件发送
-      }, 800);
+    cta.addEventListener('click', () => {
+      // 立即发送 Lead 事件
+      fbq('track','Lead');
+      // 同步跳转，避免弹窗被拦截
+      window.location.href = cta.href;
     });
   }
 });
